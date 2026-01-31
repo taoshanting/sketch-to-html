@@ -1,138 +1,2687 @@
 {
-  "do_objectID": "test-artboard-001",
-  "name": "Homepage",
-  "type": "Artboard",
-  "frame": {
-    "x": 0,
-    "y": 0,
-    "width": 375,
-    "height": 812
+  "version": "1.0.0",
+  "metadata": {
+    "sourceFile": "contract.sketch",
+    "exportedAt": "2025-12-29T02:42:15.192Z",
+    "artboardCount": 1,
+    "layerCount": 146
   },
-  "style": {
-    "backgroundColor": "#FFFFFF"
-  },
-  "layers": [
+  "artboards": [
     {
-      "do_objectID": "layer-header",
-      "name": "Header",
-      "type": "Group",
-      "frame": {
-        "x": 0,
-        "y": 0,
-        "width": 375,
-        "height": 88
-      },
-      "style": {
-        "backgroundColor": "#FFFFFF"
+      "id": "D042C985-986A-4980-B7FC-5FD87D5035BD",
+      "name": "寿险页面-不可访问通讯录",
+      "width": 375,
+      "height": 837,
+      "backgroundColor": {
+        "r": 0.9725490196078431,
+        "g": 0.9725490196078431,
+        "b": 1,
+        "a": 1,
+        "hex": "#f8f8ff"
       },
       "layers": [
         {
-          "do_objectID": "layer-title",
-          "name": "首页",
-          "type": "Text",
-          "frame": {
-            "x": 16,
-            "y": 44,
-            "width": 100,
-            "height": 24
-          },
-          "style": {
-            "fontSize": 18,
-            "fontFamily": "PingFang SC",
-            "fontWeight": 600,
-            "textColor": "#333333",
-            "textAlignment": 0
-          }
-        },
-        {
-          "do_objectID": "layer-avatar",
-          "name": "头像",
-          "type": "Shape",
-          "frame": {
-            "x": 319,
-            "y": 40,
-            "width": 40,
-            "height": 40
-          },
-          "style": {
-            "backgroundColor": "#FF6B6B",
-            "borderRadius": 20
-          }
-        }
-      ]
-    },
-    {
-      "do_objectID": "layer-banner",
-      "name": "Banner",
-      "type": "Shape",
-      "frame": {
-        "x": 16,
-        "y": 108,
-        "width": 343,
-        "height": 120
-      },
-      "style": {
-        "backgroundColor": "#4ECDC4",
-        "borderRadius": 12
-      }
-    },
-    {
-      "do_objectID": "layer-list",
-      "name": "列表",
-      "type": "Group",
-      "frame": {
-        "x": 16,
-        "y": 248,
-        "width": 343,
-        "height": 200
-      },
-      "layers": [
-        {
-          "do_objectID": "layer-item-1",
-          "name": "项目 1",
-          "type": "Shape",
+          "id": "08B660A0-DBA5-4442-97A2-C89BBC359904",
+          "type": "shape",
+          "name": "矩形",
           "frame": {
             "x": 0,
             "y": 0,
-            "width": 343,
-            "height": 60
+            "width": 375,
+            "height": 837
           },
           "style": {
-            "backgroundColor": "#F8F9FA",
-            "borderRadius": 8
-          }
+            "opacity": 1,
+            "fills": [
+              {
+                "type": "gradient",
+                "gradient": {
+                  "type": "linear",
+                  "stops": [
+                    {
+                      "position": 0,
+                      "color": {
+                        "r": 0.8483231707317074,
+                        "g": 0.9085414573517184,
+                        "b": 1,
+                        "a": 1,
+                        "hex": "#d8e8ff"
+                      }
+                    },
+                    {
+                      "position": 1,
+                      "color": {
+                        "r": 1,
+                        "g": 1,
+                        "b": 1,
+                        "a": 1,
+                        "hex": "#ffffff"
+                      }
+                    }
+                  ],
+                  "from": {
+                    "x": 0,
+                    "y": 0
+                  },
+                  "to": {
+                    "x": 0,
+                    "y": 0
+                  }
+                }
+              }
+            ],
+            "shadows": [
+              {
+                "type": "drop",
+                "offsetX": 0,
+                "offsetY": 2,
+                "blur": 8,
+                "spread": 0,
+                "color": {
+                  "r": 0,
+                  "g": 0.1215686274509804,
+                  "b": 0.4823529411764706,
+                  "a": 0.08,
+                  "hex": "#001f7b14"
+                }
+              }
+            ]
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "isVisible": true,
+          "opacity": 1
         },
         {
-          "do_objectID": "layer-item-2",
-          "name": "项目 2",
-          "type": "Shape",
+          "id": "C18BA561-7FA3-4F0F-9F1E-1D49E8DCDD5D",
+          "type": "shape",
+          "name": "iPhone X/Home Indicator/Home Indicator - On Light",
           "frame": {
             "x": 0,
-            "y": 70,
-            "width": 343,
-            "height": 60
+            "y": 1118,
+            "width": 375,
+            "height": 34
           },
           "style": {
-            "backgroundColor": "#F8F9FA",
-            "borderRadius": 8
-          }
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "isVisible": true,
+          "opacity": 1
         },
         {
-          "do_objectID": "layer-item-3",
-          "name": "项目 3",
-          "type": "Shape",
+          "id": "FCC9A0E8-8005-4C22-BCAF-9F5BBB154BEE",
+          "type": "group",
+          "name": "编组备份 5",
           "frame": {
             "x": 0,
-            "y": 140,
-            "width": 343,
-            "height": 60
+            "y": 0,
+            "width": 375.0000000000001,
+            "height": 88
           },
           "style": {
-            "backgroundColor": "#F8F9FA",
-            "borderRadius": 8
-          }
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "children": [
+            {
+              "id": "7FDD794F-A5E2-4FCC-9206-E2F4396F254C",
+              "type": "shape",
+              "name": "02_导航组件 / 01_一级导航栏/ 大标题/黑色",
+              "frame": {
+                "x": 0,
+                "y": 44,
+                "width": 375,
+                "height": 44
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "isVisible": true,
+              "opacity": 1
+            },
+            {
+              "id": "BEE6CBBD-44AA-42D0-9062-798D5F3DC300",
+              "type": "shape",
+              "name": "小组件/导航/小组件/导航/1个icon/黑色备份 8",
+              "frame": {
+                "x": 16,
+                "y": 54,
+                "width": 24,
+                "height": 24
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "isVisible": true,
+              "opacity": 1
+            },
+            {
+              "id": "6051F506-3C42-4279-B661-660699762567",
+              "type": "shape",
+              "name": "02_导航组件 / 04_状态栏 / 黑色",
+              "frame": {
+                "x": 0.04775511178650049,
+                "y": 0,
+                "width": 374.9522448882136,
+                "height": 44
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "isVisible": true,
+              "opacity": 1
+            }
+          ],
+          "isVisible": true,
+          "opacity": 1
+        },
+        {
+          "id": "71B465B3-8692-4492-B750-DF844409324A",
+          "type": "shape",
+          "name": "btn/primary/置灰备份",
+          "frame": {
+            "x": 12,
+            "y": 753,
+            "width": 351,
+            "height": 44
+          },
+          "style": {
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "isVisible": true,
+          "opacity": 1
+        },
+        {
+          "id": "A3C9C421-096C-438A-83FA-67B327EEAA7F",
+          "type": "text",
+          "name": "Label Copy 52",
+          "frame": {
+            "x": 12,
+            "y": 669,
+            "width": 351,
+            "height": 68
+          },
+          "style": {
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": false,
+            "fixedHeight": true
+          },
+          "isVisible": true,
+          "opacity": 1
+        },
+        {
+          "id": "91F76808-45C7-4332-8B80-26D2179A12D4",
+          "type": "group",
+          "name": "编组 10",
+          "frame": {
+            "x": 0,
+            "y": 797,
+            "width": 375,
+            "height": 34
+          },
+          "style": {
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "children": [
+            {
+              "id": "27DD7385-21C5-4746-A64C-402E2808769D",
+              "type": "shape",
+              "name": "iPhone X/Home Indicator/Home Indicator - On Light",
+              "frame": {
+                "x": 0,
+                "y": 0,
+                "width": 375,
+                "height": 34
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "isVisible": true,
+              "opacity": 1
+            }
+          ],
+          "isVisible": true,
+          "opacity": 1
+        },
+        {
+          "id": "2BF7C164-B601-4D53-897B-8826E46D0FE9",
+          "type": "group",
+          "name": "编组",
+          "frame": {
+            "x": 12,
+            "y": 549,
+            "width": 351,
+            "height": 108
+          },
+          "style": {
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "children": [
+            {
+              "id": "96C16023-32CA-48F2-BAEA-0F8D6B051706",
+              "type": "group",
+              "name": "编组 4",
+              "frame": {
+                "x": 0,
+                "y": 0,
+                "width": 351,
+                "height": 108
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "children": [
+                {
+                  "id": "D2010676-6667-4A36-867E-FE56BEB09CEA",
+                  "type": "shape",
+                  "name": "Rectangle 28备份",
+                  "frame": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 351,
+                    "height": 108
+                  },
+                  "style": {
+                    "opacity": 1,
+                    "fills": [
+                      {
+                        "type": "color",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1,
+                          "a": 1,
+                          "hex": "#ffffff"
+                        }
+                      }
+                    ],
+                    "shadows": [
+                      {
+                        "type": "drop",
+                        "offsetX": 0,
+                        "offsetY": 2,
+                        "blur": 18,
+                        "spread": 0,
+                        "color": {
+                          "r": 0.1683922258945437,
+                          "g": 0.1943137309457692,
+                          "b": 0.3757642663043478,
+                          "a": 0.13,
+                          "hex": "#2b326021"
+                        }
+                      }
+                    ]
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "isVisible": true,
+                  "opacity": 1
+                },
+                {
+                  "id": "46E06461-EFD1-4889-B586-3F323604DBBC",
+                  "type": "group",
+                  "name": "编组 24",
+                  "frame": {
+                    "x": 12,
+                    "y": 14,
+                    "width": 327,
+                    "height": 78
+                  },
+                  "style": {
+                    "opacity": 1
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "children": [
+                    {
+                      "id": "66DCC336-9E37-4BA7-9373-0E2313C227C2",
+                      "type": "group",
+                      "name": "编组 9",
+                      "frame": {
+                        "x": 0,
+                        "y": 34,
+                        "width": 327,
+                        "height": 44
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "2B5073F7-94AA-4AAC-A0BC-6DD6A77E7FA1",
+                          "type": "text",
+                          "name": "135 6789 6686",
+                          "frame": {
+                            "x": 12,
+                            "y": 11,
+                            "width": 113,
+                            "height": 22
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "08818B57-8F91-4D8D-944D-63BD91767A90",
+                          "type": "shape",
+                          "name": "矩形",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 327,
+                            "height": 44
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "borders": [
+                              {
+                                "color": {
+                                  "r": 0.8753679800724637,
+                                  "g": 0.8753679800724637,
+                                  "b": 0.8753679800724637,
+                                  "a": 1,
+                                  "hex": "#dfdfdf"
+                                },
+                                "thickness": 0.5,
+                                "position": "inside"
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "4B6E0894-56B8-4175-B263-8BC399DA3FF3",
+                      "type": "group",
+                      "name": "编组 2",
+                      "frame": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 188,
+                        "height": 20
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "587CAD63-5598-42D4-AFCF-BDA70E2F60B1",
+                          "type": "text",
+                          "name": "请添加您本人的微信号",
+                          "frame": {
+                            "x": 28,
+                            "y": 2,
+                            "width": 160,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "55497D5A-FC6A-4105-B245-E11672E3CE33",
+                          "type": "group",
+                          "name": "微信 (1)",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 20,
+                            "height": 20
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "35AD9EB2-0BF9-495B-AC0F-483388D86975",
+                              "type": "shape",
+                              "name": "形状",
+                              "frame": {
+                                "x": 5.913043473492097,
+                                "y": 6.637681161748437,
+                                "width": 8.507246385697105,
+                                "height": 4.289855067467445
+                              },
+                              "style": {
+                                "opacity": 1,
+                                "fills": [
+                                  {
+                                    "type": "color",
+                                    "color": {
+                                      "r": 0.1568627450980392,
+                                      "g": 0.7686274509803921,
+                                      "b": 0.2705882352941176,
+                                      "a": 1,
+                                      "hex": "#28c445"
+                                    }
+                                  }
+                                ]
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": true,
+                                "fixedHeight": true
+                              },
+                              "children": [
+                                {
+                                  "id": "3243F795-2BD1-4CDB-8CD1-CF498A807916",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 1.275362327413818,
+                                    "height": 1.159420281622493
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "650606B3-A2B0-4580-BBC3-01E8946B6A2F",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 4.956521752416116,
+                                    "y": 3.362318838251879,
+                                    "width": 1.028985509489044,
+                                    "height": 0.9275362292155656
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "1B391BD7-9212-4184-B845-A6E7FA92ED64",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 3.217391320188445,
+                                    "y": 0,
+                                    "width": 1.275362307825955,
+                                    "height": 1.159420281622493
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "078A4493-A239-440A-8279-0610219C67D3",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 7.47826087620806,
+                                    "y": 3.362318838251879,
+                                    "width": 1.028985509489045,
+                                    "height": 0.9275362292155656
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                }
+                              ],
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "0404B6DC-8026-4A2A-8782-C505D22AC442",
+                              "type": "shape",
+                              "name": "形状",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 20,
+                                "height": 20
+                              },
+                              "style": {
+                                "opacity": 1,
+                                "fills": [
+                                  {
+                                    "type": "color",
+                                    "color": {
+                                      "r": 0.1568627450980392,
+                                      "g": 0.7686274509803921,
+                                      "b": 0.2705882352941176,
+                                      "a": 1,
+                                      "hex": "#28c445"
+                                    }
+                                  }
+                                ]
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": true,
+                                "fixedHeight": true
+                              },
+                              "children": [
+                                {
+                                  "id": "A94D6A1A-A279-440A-BE04-A19A9BF295E0",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 20,
+                                    "height": 20
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "D27CBD47-D351-4347-9AA9-DDDBC15A19C1",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 3.521739141421018,
+                                    "y": 4.637681146077836,
+                                    "width": 9.202898542917886,
+                                    "height": 8.49275363976712
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "42E3FDCB-E67B-4F69-AA63-28E162016859",
+                                  "type": "shape",
+                                  "name": "路径",
+                                  "frame": {
+                                    "x": 8.69556150758882,
+                                    "y": 8.144927521981009,
+                                    "width": 7.782699370578037,
+                                    "height": 7.20289856642332
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                }
+                              ],
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    }
+                  ],
+                  "isVisible": true,
+                  "opacity": 1
+                },
+                {
+                  "id": "1464C2D6-6751-45DE-B02F-1CE389A58612",
+                  "type": "shape",
+                  "name": "图标2",
+                  "frame": {
+                    "x": 302,
+                    "y": 58,
+                    "width": 24,
+                    "height": 24
+                  },
+                  "style": {
+                    "opacity": 1
+                  },
+                  "constraints": {
+                    "horizontal": "left",
+                    "vertical": "bottom",
+                    "fixedWidth": false,
+                    "fixedHeight": true
+                  },
+                  "isVisible": true,
+                  "opacity": 1
+                }
+              ],
+              "isVisible": true,
+              "opacity": 1
+            }
+          ],
+          "isVisible": true,
+          "opacity": 1
+        },
+        {
+          "id": "5967B51E-FF8F-4F57-B923-0B5B52B43CD1",
+          "type": "group",
+          "name": "编组备份 3",
+          "frame": {
+            "x": 12,
+            "y": 100,
+            "width": 351,
+            "height": 437
+          },
+          "style": {
+            "opacity": 1
+          },
+          "constraints": {
+            "horizontal": "right",
+            "vertical": "bottom",
+            "fixedWidth": true,
+            "fixedHeight": true
+          },
+          "children": [
+            {
+              "id": "2153E92F-F9E7-42C2-B300-61AF224D976D",
+              "type": "group",
+              "name": "编组备份",
+              "frame": {
+                "x": 0,
+                "y": 0,
+                "width": 351,
+                "height": 437
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "children": [
+                {
+                  "id": "132654D3-2936-4EB5-BFA5-740E60B0BE18",
+                  "type": "shape",
+                  "name": "Rectangle 28",
+                  "frame": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 351,
+                    "height": 437
+                  },
+                  "style": {
+                    "opacity": 1,
+                    "fills": [
+                      {
+                        "type": "color",
+                        "color": {
+                          "r": 1,
+                          "g": 1,
+                          "b": 1,
+                          "a": 1,
+                          "hex": "#ffffff"
+                        }
+                      }
+                    ],
+                    "shadows": [
+                      {
+                        "type": "drop",
+                        "offsetX": 0,
+                        "offsetY": 2,
+                        "blur": 18,
+                        "spread": 0,
+                        "color": {
+                          "r": 0.1683922258945437,
+                          "g": 0.1943137309457692,
+                          "b": 0.3757642663043478,
+                          "a": 0.13,
+                          "hex": "#2b326021"
+                        }
+                      }
+                    ]
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "isVisible": true,
+                  "opacity": 1
+                },
+                {
+                  "id": "F956D46D-6B44-4B7A-929B-49615A3AE154",
+                  "type": "group",
+                  "name": "编组 17",
+                  "frame": {
+                    "x": 12,
+                    "y": 14,
+                    "width": 327,
+                    "height": 66
+                  },
+                  "style": {
+                    "opacity": 1
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "children": [
+                    {
+                      "id": "3F396B05-CEBA-40CB-867A-FCC448667661",
+                      "type": "group",
+                      "name": "编组 16",
+                      "frame": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 182,
+                        "height": 20
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "51F417C4-363F-4513-9AB9-BBB0D31D5805",
+                          "type": "group",
+                          "name": "基本信息备份",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 20,
+                            "height": 20
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "DC1BEC1A-A401-4E13-AB89-45DB467BD12E",
+                              "type": "shape",
+                              "name": "Oval Copy 2",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 20,
+                                "height": 20
+                              },
+                              "style": {
+                                "opacity": 1,
+                                "fills": [
+                                  {
+                                    "type": "color",
+                                    "color": {
+                                      "r": 0.8938071646341463,
+                                      "g": 0.9073636968085106,
+                                      "b": 1,
+                                      "a": 1,
+                                      "hex": "#e4e7ff"
+                                    }
+                                  }
+                                ]
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": true,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "27BE7506-CE56-44C2-90AF-99798838D9C9",
+                              "type": "group",
+                              "name": "房产信息",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 20,
+                                "height": 20
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": true,
+                                "fixedHeight": true
+                              },
+                              "children": [
+                                {
+                                  "id": "4D026831-765C-41DD-B046-9AACE1A5EFC5",
+                                  "type": "shape",
+                                  "name": "Oval Copy 2",
+                                  "frame": {
+                                    "x": 0,
+                                    "y": 0,
+                                    "width": 20,
+                                    "height": 20
+                                  },
+                                  "style": {
+                                    "opacity": 1,
+                                    "fills": [
+                                      {
+                                        "type": "color",
+                                        "color": {
+                                          "r": 0.09019607843137255,
+                                          "g": 0.3215686274509804,
+                                          "b": 1,
+                                          "a": 1,
+                                          "hex": "#1752ff"
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "isVisible": true,
+                                  "opacity": 1
+                                },
+                                {
+                                  "id": "1133756B-4146-4F8B-B724-209298A7D86C",
+                                  "type": "group",
+                                  "name": "编组 7",
+                                  "frame": {
+                                    "x": 4,
+                                    "y": 4,
+                                    "width": 12,
+                                    "height": 12
+                                  },
+                                  "style": {
+                                    "opacity": 1
+                                  },
+                                  "constraints": {
+                                    "horizontal": "right",
+                                    "vertical": "bottom",
+                                    "fixedWidth": true,
+                                    "fixedHeight": true
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "CA279C8A-584E-4F0B-9104-2FE6FAF7A9CF",
+                                      "type": "shape",
+                                      "name": "矩形",
+                                      "frame": {
+                                        "x": 0,
+                                        "y": 0,
+                                        "width": 12,
+                                        "height": 12
+                                      },
+                                      "style": {
+                                        "opacity": 1
+                                      },
+                                      "constraints": {
+                                        "horizontal": "right",
+                                        "vertical": "bottom",
+                                        "fixedWidth": true,
+                                        "fixedHeight": true
+                                      },
+                                      "isVisible": true,
+                                      "opacity": 1
+                                    },
+                                    {
+                                      "id": "5D3447E0-D062-4A4A-9E09-A9E669E1AAF5",
+                                      "type": "group",
+                                      "name": "通讯录 (1)",
+                                      "frame": {
+                                        "x": 1.000000000001819,
+                                        "y": 0.9999999999998863,
+                                        "width": 9.749999999998181,
+                                        "height": 10
+                                      },
+                                      "style": {
+                                        "opacity": 1
+                                      },
+                                      "constraints": {
+                                        "horizontal": "right",
+                                        "vertical": "bottom",
+                                        "fixedWidth": true,
+                                        "fixedHeight": true
+                                      },
+                                      "children": [
+                                        {
+                                          "id": "BB686BEA-D0D5-4F5C-969C-A74937E68282",
+                                          "type": "shape",
+                                          "name": "形状结合",
+                                          "frame": {
+                                            "x": 0,
+                                            "y": 0,
+                                            "width": 9.749999999998181,
+                                            "height": 10
+                                          },
+                                          "style": {
+                                            "opacity": 1,
+                                            "fills": [
+                                              {
+                                                "type": "color",
+                                                "color": {
+                                                  "r": 1,
+                                                  "g": 1,
+                                                  "b": 1,
+                                                  "a": 1,
+                                                  "hex": "#ffffff"
+                                                }
+                                              }
+                                            ]
+                                          },
+                                          "constraints": {
+                                            "horizontal": "right",
+                                            "vertical": "bottom",
+                                            "fixedWidth": true,
+                                            "fixedHeight": true
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "05B5F4AF-CB97-4CBC-8B28-7D3ABFB0B921",
+                                              "type": "shape",
+                                              "name": "形状",
+                                              "frame": {
+                                                "x": 0,
+                                                "y": 0,
+                                                "width": 9.749999999999,
+                                                "height": 10
+                                              },
+                                              "style": {
+                                                "opacity": 1,
+                                                "fills": [
+                                                  {
+                                                    "type": "color",
+                                                    "color": {
+                                                      "r": 0,
+                                                      "g": 0.09019607843137255,
+                                                      "b": 0.2352941176470588,
+                                                      "a": 1,
+                                                      "hex": "#00173c"
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "constraints": {
+                                                "horizontal": "right",
+                                                "vertical": "bottom",
+                                                "fixedWidth": true,
+                                                "fixedHeight": true
+                                              },
+                                              "children": [
+                                                {
+                                                  "id": "6402E4F0-92E2-4DB8-81D2-73B30BD05E93",
+                                                  "type": "shape",
+                                                  "name": "矩形",
+                                                  "frame": {
+                                                    "x": 9.249999999998181,
+                                                    "y": 0.9999999999998863,
+                                                    "width": 0.5000000000000004,
+                                                    "height": 2
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "color",
+                                                        "color": {
+                                                          "r": 0.847,
+                                                          "g": 0.847,
+                                                          "b": 0.847,
+                                                          "a": 1,
+                                                          "hex": "#d8d8d8"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "borders": [
+                                                      {
+                                                        "color": {
+                                                          "r": 0.592,
+                                                          "g": 0.592,
+                                                          "b": 0.592,
+                                                          "a": 1,
+                                                          "hex": "#979797"
+                                                        },
+                                                        "thickness": 0.514285714285741,
+                                                        "position": "inside"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                },
+                                                {
+                                                  "id": "7BB9E566-E60D-46EB-AF63-B2BBDD523A1A",
+                                                  "type": "shape",
+                                                  "name": "矩形备份 8",
+                                                  "frame": {
+                                                    "x": 9.249999999998181,
+                                                    "y": 3.5,
+                                                    "width": 0.5000000000000004,
+                                                    "height": 2
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "color",
+                                                        "color": {
+                                                          "r": 0.847,
+                                                          "g": 0.847,
+                                                          "b": 0.847,
+                                                          "a": 1,
+                                                          "hex": "#d8d8d8"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "borders": [
+                                                      {
+                                                        "color": {
+                                                          "r": 0.592,
+                                                          "g": 0.592,
+                                                          "b": 0.592,
+                                                          "a": 1,
+                                                          "hex": "#979797"
+                                                        },
+                                                        "thickness": 0.514285714285741,
+                                                        "position": "inside"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                },
+                                                {
+                                                  "id": "06A7EA0B-65BC-44AF-842C-F002567F4B02",
+                                                  "type": "shape",
+                                                  "name": "矩形备份 9",
+                                                  "frame": {
+                                                    "x": 9.249999999998181,
+                                                    "y": 6.000000000000114,
+                                                    "width": 0.5000000000000004,
+                                                    "height": 2
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "color",
+                                                        "color": {
+                                                          "r": 0.847,
+                                                          "g": 0.847,
+                                                          "b": 0.847,
+                                                          "a": 1,
+                                                          "hex": "#d8d8d8"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "borders": [
+                                                      {
+                                                        "color": {
+                                                          "r": 0.592,
+                                                          "g": 0.592,
+                                                          "b": 0.592,
+                                                          "a": 1,
+                                                          "hex": "#979797"
+                                                        },
+                                                        "thickness": 0.514285714285741,
+                                                        "position": "inside"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                },
+                                                {
+                                                  "id": "5143836A-B0AB-4EEF-BDB4-8893A8FFFDFF",
+                                                  "type": "shape",
+                                                  "name": "矩形",
+                                                  "frame": {
+                                                    "x": 1.75,
+                                                    "y": 0,
+                                                    "width": 7.000000000000004,
+                                                    "height": 10
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "color",
+                                                        "color": {
+                                                          "r": 0.847,
+                                                          "g": 0.847,
+                                                          "b": 0.847,
+                                                          "a": 1,
+                                                          "hex": "#d8d8d8"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "borders": [
+                                                      {
+                                                        "color": {
+                                                          "r": 0.592,
+                                                          "g": 0.592,
+                                                          "b": 0.592,
+                                                          "a": 1,
+                                                          "hex": "#979797"
+                                                        },
+                                                        "thickness": 0.514285714285741,
+                                                        "position": "inside"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                },
+                                                {
+                                                  "id": "4BDFC2B1-D701-4A6D-A1A5-D9EF41B200B8",
+                                                  "type": "shape",
+                                                  "name": "矩形",
+                                                  "frame": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "width": 1.25,
+                                                    "height": 10
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "color",
+                                                        "color": {
+                                                          "r": 0.847,
+                                                          "g": 0.847,
+                                                          "b": 0.847,
+                                                          "a": 1,
+                                                          "hex": "#d8d8d8"
+                                                        }
+                                                      }
+                                                    ],
+                                                    "borders": [
+                                                      {
+                                                        "color": {
+                                                          "r": 0.592,
+                                                          "g": 0.592,
+                                                          "b": 0.592,
+                                                          "a": 1,
+                                                          "hex": "#979797"
+                                                        },
+                                                        "thickness": 0.514285714285741,
+                                                        "position": "inside"
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                }
+                                              ],
+                                              "isVisible": true,
+                                              "opacity": 1
+                                            },
+                                            {
+                                              "id": "E6DE8E57-C31F-4C91-A6E7-A18EEBE9516B",
+                                              "type": "shape",
+                                              "name": "形状",
+                                              "frame": {
+                                                "x": 3.25,
+                                                "y": 2.25,
+                                                "width": 4,
+                                                "height": 5.499999999999948
+                                              },
+                                              "style": {
+                                                "opacity": 1,
+                                                "fills": [
+                                                  {
+                                                    "type": "color",
+                                                    "color": {
+                                                      "r": 0.9058823529411765,
+                                                      "g": 0.9294117647058824,
+                                                      "b": 1,
+                                                      "a": 1,
+                                                      "hex": "#e7edff"
+                                                    }
+                                                  }
+                                                ]
+                                              },
+                                              "constraints": {
+                                                "horizontal": "right",
+                                                "vertical": "bottom",
+                                                "fixedWidth": true,
+                                                "fixedHeight": true
+                                              },
+                                              "children": [
+                                                {
+                                                  "id": "76D744EE-F59E-434F-8FB5-546C349FFE90",
+                                                  "type": "shape",
+                                                  "name": "路径",
+                                                  "frame": {
+                                                    "x": 0,
+                                                    "y": 3.666666666666742,
+                                                    "width": 4.000000000000001,
+                                                    "height": 1.833333333333235
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "gradient",
+                                                        "gradient": {
+                                                          "type": "linear",
+                                                          "stops": [
+                                                            {
+                                                              "position": 0,
+                                                              "color": {
+                                                                "r": 0.9686274509803922,
+                                                                "g": 0.384313725490196,
+                                                                "b": 0.3764705882352941,
+                                                                "a": 1,
+                                                                "hex": "#f76260"
+                                                              }
+                                                            },
+                                                            {
+                                                              "position": 1,
+                                                              "color": {
+                                                                "r": 0.9686274509803922,
+                                                                "g": 0.8068066125051419,
+                                                                "b": 0.3764705882352941,
+                                                                "a": 1,
+                                                                "hex": "#f7ce60"
+                                                              }
+                                                            }
+                                                          ],
+                                                          "from": {
+                                                            "x": 0,
+                                                            "y": 0
+                                                          },
+                                                          "to": {
+                                                            "x": 0,
+                                                            "y": 0
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                },
+                                                {
+                                                  "id": "B180AE80-6357-4B90-9AC1-739E34891A51",
+                                                  "type": "shape",
+                                                  "name": "路径",
+                                                  "frame": {
+                                                    "x": 0.5200000000004366,
+                                                    "y": 0,
+                                                    "width": 2.857142857142857,
+                                                    "height": 3.055555555555392
+                                                  },
+                                                  "style": {
+                                                    "opacity": 1,
+                                                    "fills": [
+                                                      {
+                                                        "type": "gradient",
+                                                        "gradient": {
+                                                          "type": "linear",
+                                                          "stops": [
+                                                            {
+                                                              "position": 0,
+                                                              "color": {
+                                                                "r": 0.9686274509803922,
+                                                                "g": 0.384313725490196,
+                                                                "b": 0.3764705882352941,
+                                                                "a": 1,
+                                                                "hex": "#f76260"
+                                                              }
+                                                            },
+                                                            {
+                                                              "position": 1,
+                                                              "color": {
+                                                                "r": 0.9686274509803922,
+                                                                "g": 0.8068066125051419,
+                                                                "b": 0.3764705882352941,
+                                                                "a": 1,
+                                                                "hex": "#f7ce60"
+                                                              }
+                                                            }
+                                                          ],
+                                                          "from": {
+                                                            "x": 0,
+                                                            "y": 0
+                                                          },
+                                                          "to": {
+                                                            "x": 0,
+                                                            "y": 0
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  "constraints": {
+                                                    "horizontal": "right",
+                                                    "vertical": "bottom",
+                                                    "fixedWidth": true,
+                                                    "fixedHeight": true
+                                                  },
+                                                  "isVisible": true,
+                                                  "opacity": 1
+                                                }
+                                              ],
+                                              "isVisible": true,
+                                              "opacity": 1
+                                            }
+                                          ],
+                                          "isVisible": true,
+                                          "opacity": 1
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "opacity": 1
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "opacity": 1
+                                }
+                              ],
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "E0F35D78-C0C1-4A04-A880-62702FEA57BA",
+                          "type": "text",
+                          "name": "请提供2位联系人信息",
+                          "frame": {
+                            "x": 28,
+                            "y": 2,
+                            "width": 154,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "BF776B3C-498C-45C9-8E0B-15B9BD2C5B62",
+                      "type": "text",
+                      "name": "Label Copy 52",
+                      "frame": {
+                        "x": 0,
+                        "y": 30,
+                        "width": 327,
+                        "height": 36
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": false,
+                        "fixedHeight": true
+                      },
+                      "isVisible": true,
+                      "opacity": 1
+                    }
+                  ],
+                  "isVisible": true,
+                  "opacity": 1
+                },
+                {
+                  "id": "B82107A6-D8C7-4A2D-8DF6-318B543C2D33",
+                  "type": "group",
+                  "name": "编组 13",
+                  "frame": {
+                    "x": 12,
+                    "y": 96,
+                    "width": 327,
+                    "height": 163
+                  },
+                  "style": {
+                    "opacity": 1
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "children": [
+                    {
+                      "id": "7A3988EC-C1AA-4601-B6B6-D79AC9E6F2AB",
+                      "type": "group",
+                      "name": "编组 15",
+                      "frame": {
+                        "x": 0,
+                        "y": 81,
+                        "width": 327,
+                        "height": 33
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "0F7500AD-72D2-4404-A910-2543931BDBD1",
+                          "type": "group",
+                          "name": "编组 5",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 327,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "C9807FF3-3B8B-40F7-A2B7-D4CB95C9EEE6",
+                              "type": "text",
+                              "name": "Label Copy 27",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 32,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "1B8CA1E9-013D-4978-B5D9-48EFCAE62D8D",
+                              "type": "text",
+                              "name": "Label Copy 27备份",
+                              "frame": {
+                                "x": 295,
+                                "y": 0,
+                                "width": 32,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "13AB8D68-C0C6-42AE-A8A9-06AF56A8FFDA",
+                          "type": "shape",
+                          "name": "line copy 19备份",
+                          "frame": {
+                            "x": 0,
+                            "y": 32,
+                            "width": 327,
+                            "height": 1
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#ffffff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "82505D26-DCC6-45E8-A708-F7D05A5FFDFC",
+                      "type": "group",
+                      "name": "编组 14",
+                      "frame": {
+                        "x": 0,
+                        "y": 130,
+                        "width": 327,
+                        "height": 33
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "BB023F83-D3EE-4719-9061-FF1A31F34FF8",
+                          "type": "shape",
+                          "name": "line copy 19备份 3",
+                          "frame": {
+                            "x": 0,
+                            "y": 32,
+                            "width": 327,
+                            "height": 1
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#ffffff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "4ABCC5FF-0404-4AD4-870F-698053A14420",
+                          "type": "group",
+                          "name": "编组 8",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 327,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "14B6E297-EE62-4E37-AC0B-12CE204307A4",
+                              "type": "text",
+                              "name": "Label Copy 43备份",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 32,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "0BA79A89-3C74-4E50-8FCA-9786A6AA4258",
+                              "type": "text",
+                              "name": "Label Copy 43备份 4",
+                              "frame": {
+                                "x": 216,
+                                "y": 0,
+                                "width": 111,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "2C3036D9-E423-4772-B980-19921FFCDF26",
+                      "type": "group",
+                      "name": "编组 6",
+                      "frame": {
+                        "x": 0,
+                        "y": 32,
+                        "width": 327,
+                        "height": 33
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "834D59E2-0C3C-4616-8909-B1AA22528667",
+                          "type": "text",
+                          "name": "Label Copy 43",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 32,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "1D7C0BAC-4BA9-4BEE-A114-A07B78D31091",
+                          "type": "text",
+                          "name": "Label Copy 43备份 3",
+                          "frame": {
+                            "x": 279,
+                            "y": 0,
+                            "width": 48,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "9F974FED-5F95-4102-A6E7-30F80702F49A",
+                          "type": "shape",
+                          "name": "line copy 19",
+                          "frame": {
+                            "x": 0,
+                            "y": 32,
+                            "width": 327,
+                            "height": 1
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#ffffff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "E4ED0148-9795-4480-9EA1-3ECBC1A28911",
+                      "type": "group",
+                      "name": "编组 3",
+                      "frame": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 327,
+                        "height": 16
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "9D6C9EC2-5BB5-44C5-99DA-006D58090CA3",
+                          "type": "group",
+                          "name": "编组 10",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 96,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "D3394C5A-230E-4512-90D6-535AED2DB890",
+                              "type": "text",
+                              "name": "Label Copy 43备份 2",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 96,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "7CA95191-25DF-4ACE-B625-D041A7BE7577",
+                          "type": "group",
+                          "name": "编组 12",
+                          "frame": {
+                            "x": 220,
+                            "y": 0,
+                            "width": 107,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "94C10FD6-4A50-46F5-BB4A-CA07E04617D0",
+                              "type": "shape",
+                              "name": "三角形备份 4",
+                              "frame": {
+                                "x": 101,
+                                "y": 6,
+                                "width": 7,
+                                "height": 5
+                              },
+                              "style": {
+                                "opacity": 1,
+                                "fills": [
+                                  {
+                                    "type": "color",
+                                    "color": {
+                                      "r": 0.09019607843137255,
+                                      "g": 0.3215686274509804,
+                                      "b": 1,
+                                      "a": 1,
+                                      "hex": "#1752ff"
+                                    }
+                                  }
+                                ]
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": true,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "5057DFDF-D09D-4135-8158-AA572DDB67BC",
+                              "type": "text",
+                              "name": "Label Copy 43备份 3",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 96,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    }
+                  ],
+                  "isVisible": true,
+                  "opacity": 1
+                }
+              ],
+              "isVisible": true,
+              "opacity": 1
+            },
+            {
+              "id": "709A7E02-9688-4A8C-B791-607993B3D18F",
+              "type": "group",
+              "name": "编组备份 4",
+              "frame": {
+                "x": 12,
+                "y": 275,
+                "width": 327,
+                "height": 146
+              },
+              "style": {
+                "opacity": 1
+              },
+              "constraints": {
+                "horizontal": "right",
+                "vertical": "bottom",
+                "fixedWidth": true,
+                "fixedHeight": true
+              },
+              "children": [
+                {
+                  "id": "73D3160C-8AC8-43DA-92B7-0492441271B3",
+                  "type": "group",
+                  "name": "编组备份",
+                  "frame": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 327,
+                    "height": 146
+                  },
+                  "style": {
+                    "opacity": 1
+                  },
+                  "constraints": {
+                    "horizontal": "right",
+                    "vertical": "bottom",
+                    "fixedWidth": true,
+                    "fixedHeight": true
+                  },
+                  "children": [
+                    {
+                      "id": "D3261C9D-5565-4EC1-A5C7-3F63068FBED0",
+                      "type": "group",
+                      "name": "编组 12",
+                      "frame": {
+                        "x": 220,
+                        "y": 0,
+                        "width": 107,
+                        "height": 16
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "BC63B4F1-6E76-4FEC-99F7-055FD12C7F25",
+                          "type": "shape",
+                          "name": "三角形备份 4",
+                          "frame": {
+                            "x": 101,
+                            "y": 6,
+                            "width": 7,
+                            "height": 5
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 0.09019607843137255,
+                                  "g": 0.3215686274509804,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#1752ff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "368497DB-2EF4-4530-A121-0E84ED106B50",
+                          "type": "text",
+                          "name": "Label Copy 43备份 3",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 96,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "F284C49E-57D7-4AE1-8146-F64855399359",
+                      "type": "group",
+                      "name": "编组 7",
+                      "frame": {
+                        "x": 0,
+                        "y": 81,
+                        "width": 327,
+                        "height": 33
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "3C23D359-F364-40C5-9901-6E7DD1E8C23E",
+                          "type": "group",
+                          "name": "编组 5",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 327,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "5D0C6CD8-6297-4DD8-9A09-23937287764B",
+                              "type": "text",
+                              "name": "Label Copy 27",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 32,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            },
+                            {
+                              "id": "B0DC121A-5975-42CE-A824-5B09E178E701",
+                              "type": "text",
+                              "name": "Label Copy 27备份",
+                              "frame": {
+                                "x": 295,
+                                "y": 0,
+                                "width": 32,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "76D75F7D-0690-4A52-9C3F-69CA69103F92",
+                          "type": "shape",
+                          "name": "line copy 19备份",
+                          "frame": {
+                            "x": 0,
+                            "y": 32,
+                            "width": 327,
+                            "height": 1
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#ffffff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "BB44A7F9-71CC-4F8D-A53D-12258038C428",
+                      "type": "group",
+                      "name": "编组 6",
+                      "frame": {
+                        "x": 0,
+                        "y": 32,
+                        "width": 327,
+                        "height": 33
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "241CEB51-6825-4611-9290-18732B3F1BE9",
+                          "type": "text",
+                          "name": "Label Copy 43",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 32,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "3DC9369E-9395-4600-96E6-734AD4BC72FF",
+                          "type": "text",
+                          "name": "Label Copy 43备份 3",
+                          "frame": {
+                            "x": 279,
+                            "y": 0,
+                            "width": 48,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "E0D5F942-2D0C-4EC7-AC40-12518942CF96",
+                          "type": "shape",
+                          "name": "line copy 19",
+                          "frame": {
+                            "x": 0,
+                            "y": 32,
+                            "width": 327,
+                            "height": 1
+                          },
+                          "style": {
+                            "opacity": 1,
+                            "fills": [
+                              {
+                                "type": "color",
+                                "color": {
+                                  "r": 1,
+                                  "g": 1,
+                                  "b": 1,
+                                  "a": 1,
+                                  "hex": "#ffffff"
+                                }
+                              }
+                            ]
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "CABDF196-58FF-4293-920C-87E5ED036BAE",
+                      "type": "group",
+                      "name": "编组 3",
+                      "frame": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 96,
+                        "height": 16
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "4EF4D086-CBA9-4F2E-9078-4D5853868060",
+                          "type": "group",
+                          "name": "编组 10",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 96,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": true,
+                            "fixedHeight": true
+                          },
+                          "children": [
+                            {
+                              "id": "24268937-4112-4BFE-B62E-26F340DB765B",
+                              "type": "text",
+                              "name": "Label Copy 43备份 2",
+                              "frame": {
+                                "x": 0,
+                                "y": 0,
+                                "width": 96,
+                                "height": 16
+                              },
+                              "style": {
+                                "opacity": 1
+                              },
+                              "constraints": {
+                                "horizontal": "right",
+                                "vertical": "bottom",
+                                "fixedWidth": false,
+                                "fixedHeight": true
+                              },
+                              "isVisible": true,
+                              "opacity": 1
+                            }
+                          ],
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    },
+                    {
+                      "id": "A248D43F-A6B4-445E-8B0F-EC076F29DBAC",
+                      "type": "group",
+                      "name": "编组 8",
+                      "frame": {
+                        "x": 0,
+                        "y": 130,
+                        "width": 327,
+                        "height": 16
+                      },
+                      "style": {
+                        "opacity": 1
+                      },
+                      "constraints": {
+                        "horizontal": "right",
+                        "vertical": "bottom",
+                        "fixedWidth": true,
+                        "fixedHeight": true
+                      },
+                      "children": [
+                        {
+                          "id": "ACA2C832-FE38-4C87-ACB0-6F018CF22C16",
+                          "type": "text",
+                          "name": "Label Copy 43备份",
+                          "frame": {
+                            "x": 0,
+                            "y": 0,
+                            "width": 32,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        },
+                        {
+                          "id": "043B2FE0-AD70-4376-BB00-9BFFCF63ABBE",
+                          "type": "text",
+                          "name": "Label Copy 43备份 4",
+                          "frame": {
+                            "x": 219,
+                            "y": 0,
+                            "width": 108,
+                            "height": 16
+                          },
+                          "style": {
+                            "opacity": 1
+                          },
+                          "constraints": {
+                            "horizontal": "right",
+                            "vertical": "bottom",
+                            "fixedWidth": false,
+                            "fixedHeight": true
+                          },
+                          "isVisible": true,
+                          "opacity": 1
+                        }
+                      ],
+                      "isVisible": true,
+                      "opacity": 1
+                    }
+                  ],
+                  "isVisible": true,
+                  "opacity": 1
+                }
+              ],
+              "isVisible": true,
+              "opacity": 1
+            }
+          ],
+          "isVisible": true,
+          "opacity": 1
         }
       ]
     }
-  ]
+  ],
+  "resources": []
 }

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿险页面-不可访问通讯录 (Flex重构版)</title>
+    <style>
+        /* --- 1. 基础设置 & 变量 --- */
+        :root {
+            --primary-blue: #1752ff;
+            --bg-gradient-start: #d8e8ff;
+            --bg-gradient-end: #ffffff;
+            --text-main: #222222;
+            --text-sub: #666666;
+            --text-label: #999999;
+            --border-color: #eeeeee;
+            --card-radius: 12px;
+            --spacing-base: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 40%, #f8f8ff 100%);
+            min-height: 100vh;
+            color: var(--text-main);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* --- 2. 布局容器 --- */
+        .container {
+            max-width: 600px; /* 限制大屏宽度，模拟手机 */
+            margin: 0 auto;
+            padding: 20px 12px;
+        }
+
+        /* --- 3. 头部提示文字 --- */
+        .page-intro {
+            color: var(--text-label);
+            font-size: 12px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+            padding: 0 4px;
+        }
+
+        /* --- 4. 通用卡片样式 --- */
+        .card {
+            background: #fff;
+            border-radius: var(--card-radius);
+            box-shadow: 0 4px 18px rgba(43, 50, 96, 0.08);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        /* --- 5. 微信/手机号卡片 --- */
+        .wechat-card {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .wechat-input-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #dfdfdf;
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+
+        .phone-display {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* 模拟微信图标 */
+        .icon-wechat {
+            width: 24px;
+            height: 24px;
+            background: #28c445;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+        }
+        
+        .wechat-label {
+            font-size: 14px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        /* --- 6. 联系人信息卡片 --- */
+        .contacts-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            background: #e4e7ff;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .header-text h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .header-text p {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        /* --- 7. 表单列表 --- */
+        .contact-section {
+            margin-top: 20px;
+        }
+
+        /* 第一位/第二位联系人 标题栏 */
+        .section-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* 蓝色竖条装饰 */
+        .section-title::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 14px;
+            background: var(--primary-blue);
+            margin-right: 8px;
+            border-radius: 2px;
+        }
+
+        .action-link {
+            color: var(--primary-blue);
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 表单行 (Flex 左右布局) */
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 15px;
+        }
+
+        .form-row:last-child {
+            border-bottom: none;
+        }
+
+        .form-label {
+            color: var(--text-sub);
+            min-width: 60px;
+        }
+
+        .form-value {
+            color: var(--text-main);
+            text-align: right;
+            flex-grow: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="page-intro">
+        您需确保联系人信息真实有效，且获得联系人同意。我们可能与联系人了解您的个人情况以便评估判断您的资信状况以及在您失联时与联系人进行联系。您点击下方“同意并提交”按钮代表您同意前述内容。
+    </div>
+
+    <div class="card wechat-card">
+        <div class="wechat-input-box">
+            <span class="phone-display">135 6789 6686</span>
+            <div class="icon-wechat">✆</div> 
+        </div>
+        <div style="display: flex; align-items: center;">
+             <div class="icon-wechat" style="width: 20px; height: 20px; margin-right: 8px;">✔</div>
+             <span class="wechat-label">请添加您本人的微信号</span>
+        </div>
+    </div>
+
+    <div class="card contacts-card">
+        <div class="contacts-header">
+            <div class="header-icon">📝</div> <div class="header-text">
+                <h2>请提供2位联系人信息</h2>
+                <p>必须包含一位直系亲属(如您已婚/再婚，需提供配偶信息)。您也可以通过授权我们访问通讯录，由您勾选联系人向我们提交</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <div class="section-title-row">
+                <span class="section-title">第一位联系人</span>
+                <span class="action-link">从通讯录选择 ></span>
+            </div>
+            
+            <div class="form-row">
+                <span class="form-label">姓名</span>
+                <span class="form-value">万宇茁</span>
+            </div>
+            <div class="form-row">
+                <span class="form-label">关系</span>
+                <span class="form-value">子女</span>
+            </div>
+            <div class="form-row">
+                <span class="form-label">手机</span>
+                <span class="form-value">178 6789 6678</span>
+            </div>
+        </div>
+
+        <div class="contact-section" style="margin-top: 24px;">
+            <div class="section-title-row">
+                <span class="section-title">第二位联系人</span>
+                <span class="action-link">从通讯录选择 ></span>
+            </div>
+            
+            <div class="form-row">
+                <span class="form-label">姓名</span>
+                <span class="form-value">肖建军</span>
+            </div>
+            <div class="form-row">
+                <span class="form-label">关系</span>
+                <span class="form-value">同事</span>
+            </div>
+            <div class="form-row">
+                <span class="form-label">手机</span>
+                <span class="form-value">151 7080 7799</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

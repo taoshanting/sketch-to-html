@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿险页面-不可访问通讯录</title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rat {
+    width: 7.5rem;
+    height: 16.74rem;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgba(248, 248, 255, 1);
+}
+.valley {
+    width: 7.5rem;
+    height: 16.74rem;
+    padding-top: 0.002rem;
+    background: linear-gradient(180deg, rgba(216, 232, 255, 1) 0%,rgba(255, 255, 255, 1) 69%,rgba(255, 255, 255, 1) 100%);
+    box-shadow: 0rem 0.04rem 0.16rem 0rem rgba(0, 31, 123, 0.08);
+}
+.pence {
+    width: 7.5rem;
+    height: 0.88rem;
+    padding-top: 0.002rem;
+    margin-top: 0.88rem;
+}
+.unconditional {
+    width: 0.48rem;
+    height: 0.48rem;
+    margin: 0.2rem 0 0 0.32rem;
+}
+.feather {
+    position: relative;
+    width: 7.5rem;
+    height: 0.88rem;
+    margin-top: -1.76rem;
+}
+.zoo {
+    width: 7.02rem;
+    height: 0.88rem;
+    margin: 14.18rem 0 0 0.24rem;
+}
+.build {
+    position: relative;
+    width: 7.02rem;
+    height: 1.36rem;
+    margin: -2.56rem 0 0 0.24rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.24rem;
+    line-height: 0.34rem;
+    color: rgba(153, 153, 153, 1);
+    text-align: justify;
+}
+.field {
+    width: 7.5rem;
+    height: 0.68rem;
+    margin-top: 1.2rem;
+}
+.nationality {
+    position: relative;
+    width: 7.02rem;
+    height: 2.16rem;
+    padding-top: 0.002rem;
+    margin: -5.64rem 0 0 0.24rem;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem;
+    box-shadow: 0rem 0.04rem 0.36rem 0rem rgba(43, 50, 96, 0.13);
+}
+.salad {
+    display: flex;
+    width: 6.54rem;
+    height: 0.88rem;
+    margin: 0.96rem 0 0 0.24rem;
+    border: 0.02rem solid rgba(223, 223, 223, 1);
+    border-radius: 0.16rem;
+    align-items: center;
+}
+.ferry {
+    width: 2.26rem;
+    height: 0.44rem;
+    margin-left: 0.24rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.44rem;
+    color: rgba(34, 34, 34, 1);
+}
+.building {
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-left: 3.3rem;
+}
+.limit {
+    position: relative;
+    width: 3.2rem;
+    height: 0.32rem;
+    margin: -1.52rem 0 0 0.8rem;
+    font-family: PingFangSC-Medium;
+    font-size: 0.32rem;
+    font-weight: 500;
+    line-height: 0.32rem;
+    color: rgba(39, 42, 48, 1);
+}
+.stewardess {
+    position: relative;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: -0.36rem 0 0 0.24rem;
+    background-color: rgba(40, 196, 69, 1);
+}
+.water {
+    width: 0.4rem;
+    height: 0.4rem;
+    padding-top: 0.002rem;
+    border-radius: 50%;
+}
+.manage {
+    width: 0.18rem;
+    height: 0.16rem;
+    padding-top: 0.002rem;
+    margin: 0.1rem 0 0 0.08rem;
+}
+.path {
+    width: 0.16rem;
+    height: 0.14rem;
+    margin: 0.06rem 0 0 0.1rem;
+}
+.example {
+    position: relative;
+    display: flex;
+    width: 7.02rem;
+    height: 8.74rem;
+    margin: -11.14rem 0 0 0.24rem;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0.16rem;
+    box-shadow: 0rem 0.04rem 0.36rem 0rem rgba(43, 50, 96, 0.13);
+}
+.purple {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0.28rem 0 0 0.24rem;
+    background-color: rgba(228, 231, 255, 1);
+    border-radius: 50%;
+}
+.valid {
+    width: 0.4rem;
+    height: 0.4rem;
+    padding-top: 0.002rem;
+    background-color: rgba(23, 82, 255, 1);
+    border-radius: 50%;
+}
+.hurry {
+    width: 0.24rem;
+    height: 0.24rem;
+    padding-top: 0.002rem;
+    margin: 0.08rem 0 0 0.08rem;
+}
+.argue {
+    width: 0.2rem;
+    height: 0.2rem;
+    margin: 0.02rem 0 0 0.02rem;
+    background-color: rgba(255, 255, 255, 1);
+}
+.accommodation {
+    width: 0.2rem;
+    height: 0.2rem;
+    padding-top: 0.002rem;
+    background-color: rgba(0, 23, 60, 1);
+}
+.mixture {
+    width: 0.02rem;
+    height: 0.04rem;
+    margin: 0.02rem 0 0 0.18rem;
+    background-color: rgba(216, 216, 216, 1);
+    border: 0.02rem solid rgba(151, 151, 151, 1);
+}
+.time {
+    width: 0.02rem;
+    height: 0.04rem;
+    margin-left: 0.18rem;
+    background-color: rgba(216, 216, 216, 1);
+    border: 0.02rem solid rgba(151, 151, 151, 1);
+}
+.picnic {
+    width: 0.02rem;
+    height: 0.04rem;
+    margin: 0.02rem 0 0 0.18rem;
+    background-color: rgba(216, 216, 216, 1);
+    border: 0.02rem solid rgba(151, 151, 151, 1);
+}
+.consensus {
+    position: relative;
+    width: 0.14rem;
+    height: 0.2rem;
+    margin: -0.16rem 0 0 0.04rem;
+    background-color: rgba(216, 216, 216, 1);
+    border: 0.02rem solid rgba(151, 151, 151, 1);
+    border-radius: 0rem 0.02rem 0.02rem 0rem;
+}
+.smoke {
+    width: 0.08rem;
+    height: 0.1rem;
+    padding-top: 0.002rem;
+    background-color: rgba(231, 237, 255, 1);
+}
+.protection {
+    width: 0.08rem;
+    height: 0.04rem;
+    margin-top: 0.08rem;
+    background: linear-gradient(111.4deg, rgba(247, 206, 96, 1) 0%,rgba(247, 206, 96, 1) 5%,rgba(247, 98, 96, 1) 96%,rgba(247, 98, 96, 1) 100%);
+}
+.conscience {
+    position: relative;
+    width: 0.06rem;
+    height: 0.06rem;
+    margin: -0.12rem 0 0 0.02rem;
+    background: linear-gradient(132.4deg, rgba(247, 206, 96, 1) 0%,rgba(247, 206, 96, 1) 5%,rgba(247, 98, 96, 1) 91%,rgba(247, 98, 96, 1) 100%);
+}
+.sense {
+    position: relative;
+    width: 0.02rem;
+    height: 0.2rem;
+    margin-top: -0.2rem;
+    background-color: rgba(216, 216, 216, 1);
+    border: 0.02rem solid rgba(151, 151, 151, 1);
+    border-radius: 0.02rem 0rem 0rem 0.02rem;
+}
+.owe {
+    width: 3.08rem;
+    height: 0.32rem;
+    margin: 0.32rem 0 0 0.16rem;
+    font-family: PingFangSC-Medium;
+    font-size: 0.32rem;
+    font-weight: 500;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+}
+.chant {
+    width: 6.54rem;
+    height: 0.72rem;
+    margin: 0.88rem 0 0 -3.64rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    color: rgba(102, 102, 102, 1);
+}
+.term {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 3.54rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.urban {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 3.54rem 0 0 5.26rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+.considerate {
+    width: 6.54rem;
+    height: 0.02rem;
+    margin: 4.18rem 0 0 -6.54rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0.02rem 0rem 0rem rgba(230, 230, 230, 1) inset;
+}
+.afraid {
+    width: 6.54rem;
+    height: 0.02rem;
+    margin: 5.16rem 0 0 -6.54rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0.02rem 0rem 0rem rgba(230, 230, 230, 1) inset;
+}
+.bandage {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 4.52rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.table {
+    width: 2.22rem;
+    height: 0.32rem;
+    margin: 4.52rem 0 0 3.68rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+.tennis {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 2.56rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.candidate {
+    width: 0.96rem;
+    height: 0.32rem;
+    margin: 2.56rem 0 0 4.94rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+.combine {
+    width: 6.54rem;
+    height: 0.02rem;
+    margin: 3.2rem 0 0 -6.54rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0.02rem 0rem 0rem rgba(230, 230, 230, 1) inset;
+}
+.hurricane {
+    width: 1.92rem;
+    height: 0.32rem;
+    margin: 1.92rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+}
+.independent {
+    width: 0.14rem;
+    height: 0.1rem;
+    margin: 2.04rem 0 0 4.5rem;
+    background-color: rgba(23, 82, 255, 1);
+}
+.cancer {
+    width: 1.92rem;
+    height: 0.32rem;
+    margin: 1.92rem 0 0 -2.16rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(23, 82, 255, 1);
+    text-align: right;
+}
+.choose {
+    width: 0.14rem;
+    height: 0.1rem;
+    margin: 5.62rem 0 0 0.1rem;
+    background-color: rgba(23, 82, 255, 1);
+}
+.town {
+    width: 1.92rem;
+    height: 0.32rem;
+    margin: 5.5rem 0 0 -2.16rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(23, 82, 255, 1);
+    text-align: right;
+}
+.desire {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 7.12rem 0 0 -6.32rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.visual {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 7.12rem 0 0 5.26rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+.life {
+    width: 6.54rem;
+    height: 0.02rem;
+    margin: 7.76rem 0 0 -6.54rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0.02rem 0rem 0rem rgba(230, 230, 230, 1) inset;
+}
+.submit {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 6.14rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.physics {
+    width: 0.96rem;
+    height: 0.32rem;
+    margin: 6.14rem 0 0 4.94rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+.meaning {
+    width: 6.54rem;
+    height: 0.02rem;
+    margin: 6.78rem 0 0 -6.54rem;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0.02rem 0rem 0rem rgba(230, 230, 230, 1) inset;
+}
+.country {
+    width: 1.92rem;
+    height: 0.32rem;
+    margin: 5.5rem 0 0 -6.54rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+}
+.half {
+    width: 0.64rem;
+    height: 0.32rem;
+    margin: 8.1rem 0 0 -1.92rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(102, 102, 102, 1);
+}
+.joy {
+    width: 2.16rem;
+    height: 0.32rem;
+    margin: 8.1rem 0 0 3.74rem;
+    font-family: PingFangSC-Regular;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: rgba(34, 34, 34, 1);
+    text-align: right;
+}
+
+    </style>
+</head>
+<body>
+<div class="rat">
+    <div class="valley">
+        <div class="pence">
+            <div class="unconditional">
+
+            </div>
+        </div>
+        <div class="feather">
+
+        </div>
+        <div class="zoo">
+
+        </div>
+        <div class="build">
+            您需确保联系人信息真实有效，且获得联系人同意。我们可能与联系人了解您的个人情况以便评估判断您的资信状况以及在您失联时与联系人进行联系。您点击下方“同意并提交”按钮代表您同意前述内容。
+        </div>
+        <div class="field">
+
+        </div>
+        <div class="nationality">
+            <div class="salad">
+                <div class="ferry">
+                    135&nbsp;6789&nbsp;6686
+                </div>
+                <div class="building">
+
+                </div>
+            </div>
+            <div class="limit">
+                请添加您本人的微信号
+            </div>
+            <div class="stewardess">
+                <div class="water">
+                    <div class="manage">
+                        <div class="path">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="example">
+            <div class="purple">
+                <div class="valid">
+                    <div class="hurry">
+                        <div class="argue">
+                            <div class="accommodation">
+                                <div class="mixture">
+
+                                </div>
+                                <div class="time">
+
+                                </div>
+                                <div class="picnic">
+
+                                </div>
+                                <div class="consensus">
+                                    <div class="smoke">
+                                        <div class="protection">
+
+                                        </div>
+                                        <div class="conscience">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sense">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owe">
+                请提供2位联系人信息
+            </div>
+            <div class="chant">
+                必须包含一位直系亲属(如您已婚/再婚，需提供配偶信息)。您也可以通过授权我们访问通讯录，由您勾选联系人向我们提交
+            </div>
+            <div class="term">
+                关系
+            </div>
+            <div class="urban">
+                子女
+            </div>
+            <div class="considerate">
+
+            </div>
+            <div class="afraid">
+
+            </div>
+            <div class="bandage">
+                手机
+            </div>
+            <div class="table">
+                178&nbsp;6789&nbsp;6678
+            </div>
+            <div class="tennis">
+                姓名
+            </div>
+            <div class="candidate">
+                万宇茁
+            </div>
+            <div class="combine">
+
+            </div>
+            <div class="hurricane">
+                第一位联系人
+            </div>
+            <div class="independent">
+
+            </div>
+            <div class="cancer">
+                从通讯录选择
+            </div>
+            <div class="choose">
+
+            </div>
+            <div class="town">
+                从通讯录选择
+            </div>
+            <div class="desire">
+                关系
+            </div>
+            <div class="visual">
+                同事
+            </div>
+            <div class="life">
+
+            </div>
+            <div class="submit">
+                姓名
+            </div>
+            <div class="physics">
+                肖建军
+            </div>
+            <div class="meaning">
+
+            </div>
+            <div class="country">
+                第二位联系人
+            </div>
+            <div class="half">
+                手机
+            </div>
+            <div class="joy">
+                151&nbsp;7080&nbsp;7799
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

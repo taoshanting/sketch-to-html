@@ -8,6 +8,7 @@
     "convert": "node convert.js"
   },
   "dependencies": {
+    "@wubafe/picasso-parse": "^0.0.43",
     "adm-zip": "^0.5.10",
     "jszip": "^3.10.1"
   }

@@ -1,61 +1,77 @@
 /**
- * 测试增强版脚本
+ * 测试增强版脚本 - 基于 Picasso 核心算法
+ * 验证模块加载和 Sketch 文件转换
  */
 
 const fs = require('fs');
-const { BaseParser, LayoutGrouper, LayoutCalculator, StructureCleaner, CodeGenerator } = require('./enhanced.js');
+const path = require('path');
+const {
+    SketchToHTML,
+    SketchParser,
+    StyleTransformer,
+    CodeGenerator,
+    WebScale,
+    IOSScale,
+    AndroidScale,
+    Unit,
+    ColorFormat,
+    CodeType
+} = require('./enhanced.js');
 
-// 加载示例数据
-const exampleData = JSON.parse(fs.readFileSync('./example.json', 'utf8'));
+console.log('🧪 测试增强版 Sketch 转 HTML (Picasso 核心算法)...\n');
 
-console.log('🧪 测试增强版 Sketch 转 HTML...\n');
+// 1. 验证模块导入
+console.log('1️⃣ 验证模块导入...');
+console.log('   - SketchParser:', typeof SketchParser.parseArtboard === 'function' ? '✅' : '❌');
+console.log('   - CodeGenerator:', typeof CodeGenerator.generateFullHTML === 'function' ? '✅' : '❌');
+console.log('   - StyleTransformer:', typeof StyleTransformer.transform === 'function' ? '✅' : '❌');
+console.log('   - SketchToHTML:', typeof SketchToHTML === 'function' ? '✅' : '❌');
 
-// 1. 基础解析
-console.log('1️⃣ 基础解析...');
-const dsl = BaseParser.parseToDSL(exampleData);
-console.log('✅ 解析完成');
+// 2. 验证常量导出
+console.log('\n2️⃣ 验证常量导出...');
+console.log('   - CodeType:', CodeType ? '✅' : '❌');
+console.log('   - Unit:', Unit ? '✅' : '❌');
+console.log('   - ColorFormat:', ColorFormat ? '✅' : '❌');
+console.log('   - WebScale:', WebScale ? '✅' : '❌');
 
-// 2. 布局识别
-console.log('\n2️⃣ 布局识别...');
-const layoutInfo = LayoutGrouper.identifyLayout(dsl.children);
-console.log('布局信息:', layoutInfo || '未识别到特定布局');
+// 3. 验证 CodeType 值
+console.log('\n3️⃣ 验证 CodeType 值...');
+console.log(`   - CodeType.WebPx: ${CodeType.WebPx}`);
+console.log(`   - CodeType.Weapp: ${CodeType.Weapp}`);
+console.log(`   - CodeType.ReactNative: ${CodeType.ReactNative}`);
 
-// 3. 布局计算
-console.log('\n3️⃣ 应用布局算法...');
-const dslWithLayout = LayoutCalculator.apply(dsl);
-console.log('✅ 布局应用完成');
+// 4. 检查 Sketch 文件并转换
+console.log('\n4️⃣ Sketch 文件转换测试...');
+const sketchFiles = fs.readdirSync('.')
+    .filter(f => f.endsWith('.sketch'))
+    .map(f => `./${f}`);
 
-// 4. 结构清理
-console.log('\n4️⃣ 清理冗余结构...');
-const cleanedDSL = StructureCleaner.clean(dslWithLayout);
-console.log('✅ 清理完成');
+if (sketchFiles.length > 0) {
+    const testOutputDir = './enhanced-output-test';
+    console.log(`   找到 Sketch 文件: ${sketchFiles.join(', ')}`);
 
-// 5. 生成代码
-console.log('\n5️⃣ 生成 HTML/CSS...');
-const html = CodeGenerator.generateFullHTML(cleanedDSL, exampleData.name);
-console.log('✅ 代码生成完成');
+    try {
+        const converter = new SketchToHTML(sketchFiles[0], testOutputDir);
+        converter.convert();
 
-// 保存结果
-const outputDir = './enhanced-output';
-if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
+        // 检查输出文件
+        const outputFiles = fs.readdirSync(testOutputDir).filter(f => f.endsWith('.html'));
+        console.log(`   生成 ${outputFiles.length} 个 HTML 文件`);
 
-fs.writeFileSync(`${outputDir}/dsl.json`, JSON.stringify(cleanedDSL, null, 2));
-fs.writeFileSync(`${outputDir}/full.html`, html);
-fs.writeFileSync(`${outputDir}/css.css`, CodeGenerator.generateCSS(cleanedDSL));
-fs.writeFileSync(`${outputDir}/html.html`, CodeGenerator.generateHTML(cleanedDSL));
+        if (outputFiles.length > 0) {
+            // 检查文件内容
+            const sampleFile = fs.readFileSync(path.join(testOutputDir, outputFiles[0]), 'utf8');
+            const hasContent = sampleFile.includes('<style>') && sampleFile.includes('.');
+            console.log(`   首个文件内容检查: ${hasContent ? '✅ 有 CSS' : '❌ 无 CSS'}`);
+        }
 
-console.log('\n📁 输出文件:');
-console.log(`   - ${outputDir}/dsl.json`);
-console.log(`   - ${outputDir}/full.html`);
-console.log(`   - ${outputDir}/css.css`);
-console.log(`   - ${outputDir}/html.html`);
-
-// 展示布局信息
-if (cleanedDSL.layout) {
-    console.log('\n🎯 识别到的布局:');
-    console.log(`   类型: ${cleanedDSL.layout.type}`);
-    if (cleanedDSL.layout.gap) console.log(`   间距: ${cleanedDSL.layout.gap}px`);
-    if (cleanedDSL.layout.isList) console.log('   列表: 是');
+        console.log('\n✅ Sketch 文件转换测试成功!');
+    } catch (error) {
+        console.log(`   转换测试失败: ${error.message}`);
+    }
+} else {
+    console.log('   未找到 Sketch 文件，跳过实际转换测试');
+    console.log('   可用命令: node enhanced.js <sketch文件路径> [输出目录]');
 }
 
-console.log('\n🎉 测试完成!');
+console.log('\n🎉 测试完成! (Picasso 核心算法版)');
