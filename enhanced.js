@@ -1,13 +1,13 @@
 /**
  * Sketch to HTML - 基于 Picasso 核心算法
- * 完整复用 @wubafe/picasso-parse 核心库
+ * 使用 @wubafe/picasso-parse 核心库
  */
 
 const fs = require('fs');
 const path = require('path');
 const AdmZip = require('adm-zip');
 
-// 复用 Picasso 核心库（主包已导出所有必需 API）
+//Picasso 核心库（主包已导出所有必需 API）
 const {
     picassoArtboardCodeParse,
     picassoCode,

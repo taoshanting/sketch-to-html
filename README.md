@@ -1,13 +1,15 @@
 # Sketch to HTML 转换器
 
-基于 Picasso 核心算法思想，将 Sketch 设计稿转换为 HTML/CSS 代码。
+基于 @wubafe/picasso-parse 核心算法库，将 Sketch 设计稿转换为 HTML/CSS 代码。
 
 ## 目录结构
 
 ```
 sketch-to-html/
 ├── package.json
-├── convert.js          # 核心转换脚本
+├── enhanced.js         # 核心转换脚本
+├── test-enhanced.js    # 测试文件
+├── CLAUDE.md           # 项目说明
 ├── README.md           # 本文件
 └── output/             # 输出目录
 ```
@@ -24,174 +26,136 @@ npm install
 ### 方式一：命令行
 
 ```bash
-node convert.js <sketch文件路径> [输出目录]
+node enhanced.js <sketch文件路径> [输出目录]
 
 # 示例
-node convert.js ./design.sketch
-node convert.js ./design.sketch ./output
+node enhanced.js ./design.sketch
+node enhanced.js ./design.sketch ./output
 ```
 
 ### 方式二：在代码中引入
 
 ```javascript
-const SketchToHtml = require('./convert.js');
+const { SketchToHTML, CodeGenerator } = require('./enhanced.js');
 
-const converter = new SketchToHtml('./design.sketch', './output');
-
-// 转换整个文件
+// 完整转换
+const converter = new SketchToHTML('./design.sketch', './output');
 converter.convert();
 
-// 或转换单个画板
-const result = converter.convertArtboard('Homepage');
-console.log(result.html);
-console.log(result.css);
+// 生成单个 HTML
+const dsl = SketchParser.parseArtboard(artboardData);
+const fullHTML = CodeGenerator.generateFullHTML(dsl, 'PageName');
 ```
 
-## 支持的功能
+## 功能特性
 
-### 图层类型
+### 支持的图层类型
 - [x] Artboard (画板)
+- [x] SymbolMaster (主控件)
 - [x] Group (组)
 - [x] Text (文本)
 - [x] Shape (形状)
 - [x] Image (图片)
 
-### 样式属性
-- [x] 背景颜色
+### 支持的样式属性
+- [x] 背景颜色 / 渐变
 - [x] 透明度
 - [x] 圆角
 - [x] 边框
 - [x] 阴影
-- [x] 字体大小
-- [x] 字体颜色
+- [x] 字体大小 / 颜色 / 粗细
 - [x] 位置和尺寸
 
-### 布局
+### 布局支持
 - [x] 绝对定位
 - [x] Flexbox 布局
+- [x] 响应式视口
 
 ## 工作流程
 
 ```
 Sketch 文件 (.sketch)
        ↓
-    解压 (ZIP)
+    解压 (adm-zip)
        ↓
-  读取 JSON 数据
+  读取 JSON (document.json + pages/*.json)
        ↓
-  解析图层 → DSL
+  picassoArtboardCodeParse()  // @wubafe/picasso-parse
+       ├─ parseArtboardLayer
+       ├─ parseDSL
+       ├─ picassoLayout
+       └─ handleClassName
        ↓
-  生成 HTML/CSS
+  picassoCode()  // 生成 HTML/CSS
        ↓
   输出 HTML 文件
 ```
 
-## 实现原理
+## 输出示例
 
-### 1. Sketch 文件结构
-Sketch 文件本质是一个 ZIP 压缩包，包含：
-- `document.json` - 文档元数据
-- `pages/` - 页面 JSON 文件
-- `meta.json` - 元信息
-- `user.json` - 用户数据
+输入 Sketch 文件后，生成语义化 HTML：
 
-### 2. 核心算法（来自 Picasso）
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面名称</title>
+    <style>
+        /* Flexbox 布局样式 */
+        .container { display: flex; flex-direction: column; }
+        .card { border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">...</div>
+        <div class="content">...</div>
+    </div>
+</body>
+</html>
+```
 
-**解析流程：**
-1. **图层解析** - 将 Sketch 图层转换为 DSL（Domain Specific Language）
-2. **样式转换** - 转换颜色、尺寸、字体等样式
-3. **布局处理** - 计算位置和 Flexbox 布局
-4. **代码生成** - 生成 HTML 和 CSS
+## 转换框架组件 (MCP)
 
-### 3. DSL 结构
+配合 [sketch-to-framework skill](https://github.com/anthropics/claude-code-skills/tree/main/sketch-to-framework)，可将生成的 HTML 转换为 Vue/React 组件：
 
-```typescript
-interface DSL {
-  id: string;           // 图层 ID
-  name: string;         // 图层名称
-  type: LayerType;      // 图层类型
-  frame: {
-    x: number;          // X 坐标
-    y: number;          // Y 坐标
-    width: number;      // 宽度
-    height: number;     // 高度
-  };
-  style: {
-    backgroundColor: Color;
-    borderRadius: number;
-    opacity: number;
-    // ... 更多样式
-  };
-  children: DSL[];      // 子图层
-}
+```
+Sketch 文件 → enhanced.js MCP → 原始 HTML → 重构引擎 → Vue/React 组件
 ```
 
 ## 关于 Picasso 核心模块
 
-本项目参考了 Picasso 的核心算法：
+本项目完整复用 @wubafe/picasso-parse 核心库：
 
-| Picasso 模块 | 功能 | 本项目对应 |
-|--------------|------|-----------|
-| `@wubafe/picasso-parse` | Sketch 数据解析和 DSL 转换 | `parseLayerToDSL()` |
-| `picasso-trans` | 样式转换 | `_parseStyle()` |
-| `picasso-code` | 生成 HTML/CSS 代码 | `generateHTML()` + `generateCSS()` |
+| 模块 | 功能 |
+|------|------|
+| `picassoArtboardCodeParse` | Sketch 数据解析和 DSL 转换 |
+| `picassoCode` | 生成 HTML/CSS/小程序代码 |
+| `picassoWebCode` | Web 平台代码生成 |
+| `picassoWeappCode` | 微信小程序代码生成 |
+| `picassoRNCode` | React Native 代码生成 |
+
+### Picasso 代码类型
+
+```javascript
+const { CodeType } = require('@wubafe/picasso-parse');
+
+CodeType.WebPx      // Web CSS (px)
+CodeType.Weapp      // 微信小程序 (rpx)
+CodeType.ReactNative // React Native
+```
 
 ## 限制和注意事项
 
-1. **100% 还原度的挑战**：
-   - 复杂动画效果无法还原
-   - 部分 Sketch 特性（如 Symbols）需要额外处理
-   - 图片资源需要单独导出
-
-2. **需要手动调整**：
-   - 字体文件需要自行引入
-   - 图片资源需要替换
-   - 响应式布局需要微调
-
-## 高级用法
-
-### 自定义样式转换
-
-```javascript
-const converter = new SketchToHtml('design.sketch');
-
-// 转换后自定义处理
-const result = converter.convertArtboard('Homepage');
-
-// 添加自定义 CSS
-const customCSS = `
-.custom-class {
-  /* 你的自定义样式 */
-}
-`;
-
-const fullHTML = result.fullHTML.replace('</style>', `${customCSS}</style>`);
-```
-
-### 批量处理
-
-```javascript
-const fs = require('fs');
-const SketchToHtml = require('./convert.js');
-
-const files = fs.readdirSync('./sketches')
-  .filter(f => f.endsWith('.sketch'));
-
-files.forEach(file => {
-  const converter = new SketchToHtml(`./sketches/${file}`);
-  converter.convert();
-});
-```
-
-## 下一步改进
-
-- [ ] 支持图片资源导出
-- [ ] 支持 Symbols 和组件
-- [ ] 支持更复杂的布局算法
-- [ ] 添加 Webpack/Vite 插件
-- [ ] 支持 Vue/React 组件生成
+1. **多 Page 处理**：默认只处理第一个 Page
+2. **复杂动画**：无法还原复杂动画效果
+3. **图片资源**：需要单独导出和替换
+4. **Symbols**：支持基本的主控件解析
 
 ## 参考资料
 
+- [@wubafe/picasso-parse](https://www.npmjs.com/package/@wubafe/picasso-parse)
 - [Picasso GitHub](https://github.com/wuba/Picasso)
 - [Sketch 文件格式](https://developer.sketch.com/file-format/)
