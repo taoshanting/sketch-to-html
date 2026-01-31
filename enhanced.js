@@ -483,9 +483,14 @@ class CodeGenerator {
     }
 
     static getClassName(dsl) {
-        if (dsl.type === 'text') return `text-${dsl.id.slice(0,6)}`;
+        // 处理 name 不存在的情况
+        if (!dsl.name) {
+            return `layer-${(dsl.id || 'unknown').slice(0, 6)}`;
+        }
+
+        if (dsl.type === 'text') return `text-${dsl.id.slice(0, 6)}`;
         let name = dsl.name.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-').replace(/^-|-$/g, '');
-        if (!name || /^\d/.test(name)) name = `layer-${dsl.id.slice(0,6)}`;
+        if (!name || /^\d/.test(name)) name = `layer-${dsl.id.slice(0, 6)}`;
         return name;
     }
 
