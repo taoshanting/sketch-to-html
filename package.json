@@ -1,0 +1,14 @@
+{
+  "name": "sketch-to-html",
+  "version": "1.0.0",
+  "description": "Sketch 文件转 HTML 工具",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "convert": "node convert.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "jszip": "^3.10.1"
+  }
+}
