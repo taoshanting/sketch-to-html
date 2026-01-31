@@ -141,36 +141,47 @@ class SketchToHTML {
 
         console.log('\n🚀 开始转换...\n');
 
-        this.pages.forEach(page => {
-            console.log(`📄 ${page.name}`);
+        // 只处理第一个 page
+        const artboards = [];
+        const firstPage = this.pages[0];
 
-            page.layers
-                .filter(l => (l.type === 'Artboard' || l._class === 'artboard' || l._class === 'symbolMaster'))
-                .forEach(artboard => {
-                    console.log(`  📐 ${artboard.name}`);
+        if (!firstPage) {
+            console.log('❌ 未找到任何 page');
+            return;
+        }
 
-                    // 使用 Picasso 解析
-                    const dsl = SketchParser.parseArtboard(artboard);
+        console.log(`📄 ${firstPage.name} (仅处理此 page)`);
 
-                    // 生成完整 HTML
-                    const fullHTML = CodeGenerator.generateFullHTML(dsl, artboard.name);
+        firstPage.layers
+            .filter(l => (l.type === 'Artboard' || l._class === 'artboard' || l._class === 'symbolMaster'))
+            .forEach(artboard => {
+                console.log(`  📐 ${artboard.name}`);
 
-                    // 保存文件
-                    const safeName = artboard.name
-                        // 保留中文字符、字母、数字
-                        .replace(/[^\w\u4e00-\u9fa5]+/g, '-')
-                        .replace(/^-+|-+$/g, '')
-                        .substring(0, 100); // 限制长度
+                // 使用 Picasso 解析
+                const dsl = SketchParser.parseArtboard(artboard);
 
-                    // 如果名称为空，使用 ID 生成文件名
-                    const finalName = safeName || `artboard-${artboard.id?.slice(0, 8) || 'unknown'}`;
+                // 生成完整 HTML
+                const fullHTML = CodeGenerator.generateFullHTML(dsl, artboard.name);
 
-                    const outputPath = path.join(this.outputDir, `${finalName}.html`);
-                    fs.writeFileSync(outputPath, fullHTML, 'utf8');
-
-                    console.log(`  ✅ 已保存: ${finalName}.html`);
+                artboards.push({
+                    name: artboard.name,
+                    html: fullHTML
                 });
-        });
+            });
+
+        // 只保留最后一个 artboard 的 HTML
+        if (artboards.length > 0) {
+            const lastArtboard = artboards[artboards.length - 1];
+            const safeName = lastArtboard.name
+                .replace(/[^\w\u4e00-\u9fa5]+/g, '-')
+                .replace(/^-+|-+$/g, '')
+                .substring(0, 100);
+
+            const outputPath = path.join(this.outputDir, `${safeName}.html`);
+            fs.writeFileSync(outputPath, lastArtboard.html, 'utf8');
+
+            console.log(`  ✅ 已保存: ${safeName}.html`);
+        }
 
         console.log(`\n🎉 完成! 输出: ${path.resolve(this.outputDir)}`);
     }
